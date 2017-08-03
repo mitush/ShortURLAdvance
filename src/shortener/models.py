@@ -76,13 +76,13 @@ class KirrURL( models.Model ):
 	def get_short_url(self):
 		#we can use this method for making the shortcode a http link
 		print ("shortcode is",self.shortcode)
-		return "http://www.kirr.com:8000/{shortcode}".format(shortcode=self.shortcode)
+		# return "http://www.kirr.com:8000/{shortcode}".format(shortcode=self.shortcode)
 		#-----------------------------------------------------------
 		#						or
 		#-----------------------------------------------------------
 		#use reverse module from django.core.urlresolvers
 		url_path=reverse("scode",kwargs={'shortcode':self.shortcode})
-		return "http://www.kirr.com:8000/"+url_path
+		return "127.0.0.1:8000"+url_path
 
 
 

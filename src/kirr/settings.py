@@ -25,7 +25,7 @@ SECRET_KEY = '#=#lxy5gplp5twajt-6rq*v(=ti66%(&fyl%78_-4bcjgag8h^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.kirr.com','www.kirr.co','kirr.com']
+ALLOWED_HOSTS = []#'www.kirr.com','www.kirr.co','kirr.com']
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #helper apps used
-    'django_hosts',
+    #'django_hosts',
     #custom apps
     'shortener',
     'analytics',
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
 #adding django-hosts request middleware to middleware
-    'django_hosts.middleware.HostsRequestMiddleware',
+    #'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,13 +55,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #adding django-hosts response middleware to end of middle ware
-    'django_hosts.middleware.HostsResponseMiddleware',
+    #'django_hosts.middleware.HostsResponseMiddleware',
 ]
 
 ROOT_URLCONF = 'kirr.urls'
-ROOT_HOSTCONF = 'kirr.hosts'
-DEFAULT_HOST = 'www'
-DEFAULT_REDIRECT_URL = 'http://www.kirr.com:8000'
+# ROOT_HOSTCONF = 'kirr.hosts'
+# DEFAULT_HOST = 'www'
+# DEFAULT_REDIRECT_URL = 'http://www.kirr.com:8000'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
